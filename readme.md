@@ -1,6 +1,9 @@
 # Crabada Accountant
 Crabada Accountant is a little tool I wrote to help me keep track of my Crabada mining teams. My goal was to collect transaction data from [Snowtrace](https://snowtrace.io) and enrich it with price data from [CoinGecko](https://coingecko.com). This requires a Snowtrace account, it's free to sign up and you get 5 API requests per second on the free plan which is more than enough, no payment information required! 
 
+
+*NOTE:* This currently downloads all your transactions. I hope to include block ranges soon. I use a dedicated account for my mining teams, so all my transactions are Crabada based. 
+
 ****
 
 
