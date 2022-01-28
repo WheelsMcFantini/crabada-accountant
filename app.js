@@ -74,7 +74,7 @@ async function parseTransactionList(ERC20TxList, address) {
 //Converts 1 accounts worth of transactions into a CSV
 async function crabadaAccountant(address) {
     console.log(`Running accountant for account ${address}`)
-    txList = await retrieveTransactionData(address)
+    txList = await retrieveTransactionData(address, process.env.START_BLOCK, process.env.END_BLOCK)
     await openFile(address)
     await parseTransactionList(txList['result'], address)
 }

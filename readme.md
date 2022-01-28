@@ -23,7 +23,8 @@ Once you've created your Snowtrace account, log in and :
 4. Replace the placeholder addresses with the addresses you'd like to track
 5. Replace `PUT_YOUR_SNOWTRACE_API_KEY_HERE` with your Snowtrace API Key
 6. Find yourself an Avalance endpoint to connect to and replace `https://whatever_avalanche_endpoint/you/are/using` with your endpoint URL. I use the a free account and API plan at Ankr. 
-7. Update your desired Fiat currency if you'd like. I haven't tested all of them but any currency CoinGecko supports should work. (Tested usd, eur, krw, and gbp) 
+7. Update your desired Fiat currency if you'd like. I haven't tested all of them but any currency CoinGecko supports should work. (Tested usd, eur, krw, and gbp)
+8. Adjust your start and end blocks to your liking. By default it will pull all transactions.
 
 Once the above is complete, you can install it's dependencies with `yarn install` and then run the tool from the downloaded directory with `node app.js`!
 
