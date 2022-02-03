@@ -148,10 +148,12 @@ async function fetchAndRetryIfNecessary (coingeckoURL) {
 
 //parses coingecko json output into the requested fiat price, checks for that currency first
 async function parseCoingeckoPrice(coingeckoOutput, fiatTicker){
-    if (coingeckoOutput['market_data']['current_price'].hasOwnProperty(fiatTicker)) {
-        //console.log(`The API response does have ${fiatTicker} as a key`)
+    console.log(coingeckoOutput)
+    //optional chaining, read about
+    if (coingeckoOutput.market_data?.current_price.hasOwnProperty(fiatTicker)) {
+        console.log(`The API response does have ${fiatTicker} as a key`)
         if (typeof coingeckoOutput['market_data']['current_price'][fiatTicker] !== "undefined"){
-            //console.log(`The API response has a value for the key ${fiatTicker}`)
+            console.log(`The API response has a value for the key ${fiatTicker}`)
             return coingeckoOutput['market_data']['current_price'][fiatTicker]
         } else {
             console.log(`The API response has an undefined value for the key ${fiatTicker}`)
